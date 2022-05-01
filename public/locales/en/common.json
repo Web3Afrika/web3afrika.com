@@ -1,41 +1,37 @@
 {
-  "title": "Developer DAO",
-  "description": "A community of builders who believe in collective ownership of the internet.",
-  "currentStatus": "Current Status",
-  "season": "Season",
-  "callout": "We're forming guilds, creating culture, strengthening our community, teaching & learning, and building cool things together.",
-  "calloutButton": "Read our Snapshot",
+  "title": "Web3Afrika",
+  "description": "We are Web3 Afrika, the largest community of Web3 builders in Africa.",
   "mission": {
     "title":  "Mission",
-    "body": "Developer DAO exists to accelerate the education and impact of a new wave of web3 builders."
+    "body": "Web3 Afrika exists to accelerate the education and opportunities of a new wave of builders and bring diversity into web3 conversations globally by fostering communities in Africa, Africans in diaspora, and persons of African descent from across the world."
   },
   "values": {
     "title": "Values",
-    "transparency": {
-      "title": "Transparency",
-      "body": "open source everything, conversations in public, document and share journey"
+    "access": {
+      "title": "Access",
+      "body": "to provide access to our members that would not otherwise be available. Access to education, funding, community, networks"
     },
     "diversity": {
-      "title": "Diversity and Inclusion",
-      "body": "seek to foster as diverse a membership as possible and support everyone to contribute"
+      "title": "Diversity",
+      "body": "open source everything, conversations in public, document and shared journey"
     },
     "responsibility": {
       "title": "Responsibility",
-      "body": "as a self-governed community we rely on members to be personally responsible for their actions and commitments to the community"
+      "body": "as a self-governed community, we rely on members to be personally responsible for their actions and commitments to the community"
     },
     "kindness": {
       "title": "Kindness and Empathy",
-      "body": "we know that we are living in a complex, stressful, and diverse world and go out of our way to make people’s lives and days better through our interactions"
+      "body": "we know that we live in a complex, stressful, and diverse world and go out of our way to make people’s lives and days better through our interactions"
     }
   },
   "goals": {
     "title": "Goals",
-    "body1": "Onboard, Educate & Support Web3 Developers",
+    "body1": "Onboard, Educate & Support Web3 BUilders",
     "body2": "Foster & Build Web3 Tools & Public Goods"
   },
   "membership": {
     "title": "How do I join?",
-    "body": "To gain access to Developer DAO you can acquire one of our genesis NFTs on the open market or from another DAO member."
+    "body": "To gain access to Web3Afrika is FREE."
   },
   "links": {
     "title": "Useful links",
@@ -44,5 +40,5 @@
     "snapshot": "Snapshot",
     "blog": "Blog"
   },
-  "socialLinkLabel": "Opens the Developer DAO {{platform}} in the current tab"
+  "socialLinkLabel": "Opens the Web3Afrika {{platform}} in the current tab"
 }

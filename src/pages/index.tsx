@@ -18,9 +18,7 @@ import {
 } from '@chakra-ui/react';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { ReactElement } from 'react';
-import { BsLightningCharge } from 'react-icons/bs';
 import { FaDiscord, FaGithub, FaTwitter } from 'react-icons/fa';
-import { GiCrownedHeart } from 'react-icons/gi';
 import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
 import DeveloperDaoLogo from '../components/Logo';
@@ -43,12 +41,10 @@ export default function IndexPage() {
         }
       >
         <Heading as="h1" fontSize="xl">
-          <DeveloperDaoLogo />
+          {/* <DeveloperDaoLogo /> */}
         </Heading>
 
         <Stack spacing={{ base: 10, md: 12 }}>
-          <CurrentStatus />
-
           <Stack spacing={6}>
             <Heading as="h2" fontSize="lg">
               {t('mission.title')}
@@ -63,9 +59,9 @@ export default function IndexPage() {
             <UnorderedList spacing={3}>
               <ListItem>
                 <Text as="span" fontWeight="bold">
-                  {t('values.transparency.title')}
+                  {t('values.access.title')}
                 </Text>
-                : {t('values.transparency.body')}
+                : {t('values.access.body')}
               </ListItem>
               <ListItem>
                 <Text as="span" fontWeight="bold">
@@ -111,20 +107,12 @@ export default function IndexPage() {
             </Heading>
             <UnorderedList spacing={3}>
               <ListItem>
-                <a href="https://developerdao.notion.site/developerdao/Developer-DAO-Wiki-eff4dcb00bef46fbaa93e9e4cf940e2e">
+                <a href="https://web3afrika.notion.site/Web3Afrika-6ff3052980444d6b91b2808cdfb4c9e0">
                   {t('links.wiki')}
                 </a>
               </ListItem>
               <ListItem>
-                <a href="https://forum.developerdao.com">{t('links.forum')}</a>
-              </ListItem>
-              <ListItem>
-                <a href="https://snapshot.org/#/devdao.eth">
-                  {t('links.snapshot')}
-                </a>
-              </ListItem>
-              <ListItem>
-                <a href="https://blog.developerdao.com/">{t('links.blog')}</a>
+                <a href="https://blog.web3afrika.com/">{t('links.blog')}</a>
               </ListItem>
             </UnorderedList>
           </Stack>
@@ -133,7 +121,7 @@ export default function IndexPage() {
         <VStack spacing={4}>
           <HStack as="footer" justify="center">
             <SocialIconLink
-              href="https://twitter.com/developer_dao"
+              href="https://twitter.com/web3afrika"
               label="Twitter"
             >
               <>
@@ -143,7 +131,7 @@ export default function IndexPage() {
                 </VisuallyHidden>
               </>
             </SocialIconLink>
-            <SocialIconLink href="https://discord.gg/devdao" label="Discord">
+            <SocialIconLink href="#" label="Discord">
               <>
                 <FaDiscord />
                 <VisuallyHidden>
@@ -151,10 +139,7 @@ export default function IndexPage() {
                 </VisuallyHidden>
               </>
             </SocialIconLink>
-            <SocialIconLink
-              href="https://github.com/Developer-DAO"
-              label="GitHub"
-            >
+            <SocialIconLink href="https://github.com/Web3Afrika" label="GitHub">
               <>
                 <FaGithub />
                 <VisuallyHidden>
@@ -190,53 +175,6 @@ export const getStaticProps = async ({ locale }: { locale: string }) => ({
     ...(await serverSideTranslations(locale, ['common'])),
   },
 });
-
-const CurrentStatus = () => {
-  const shouldShowIcon = useBreakpointValue({ base: false, md: true });
-  const buttonSize = useBreakpointValue({ base: 'md', md: 'lg' });
-  const { t } = useTranslation();
-
-  return (
-    <Stack
-      as="aside"
-      py={6}
-      px={8}
-      align="center"
-      direction="row"
-      spacing={8}
-      bg="white"
-      rounded="lg"
-      color="black"
-    >
-      {shouldShowIcon && <Icon as={GiCrownedHeart} boxSize={20} />}
-      <Stack spacing={4}>
-        <Stack fontSize="xs">
-          <Text fontSize="sm" fontWeight="bold">
-            {t('currentStatus')}: {t('season')} 0
-          </Text>
-          <Text>{t('callout')}</Text>
-        </Stack>
-        <Box>
-          <Button
-            as="a"
-            href="https://snapshot.org/#/devdao.eth/proposal/0x52fc76fe5865cf038b89b8c6ef78b6e691c0ab9c2b1228b84b0813b7832ce369"
-            size={buttonSize}
-            fontSize="xs"
-            bg="white"
-            border="1px"
-            borderStyle="solid"
-            borderColor="black"
-            _hover={{ bg: 'gray.100' }}
-            _active={{ bg: 'gray.200' }}
-            leftIcon={<BsLightningCharge />}
-          >
-            {t('calloutButton')}
-          </Button>
-        </Box>
-      </Stack>
-    </Stack>
-  );
-};
 
 const SocialIconLink = ({
   children,
